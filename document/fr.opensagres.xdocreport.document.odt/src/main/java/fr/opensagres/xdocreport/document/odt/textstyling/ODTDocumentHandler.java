@@ -390,7 +390,11 @@ public class ODTDocumentHandler
     protected void doStartOrderedList( ListProperties properties )
         throws IOException
     {
-        internalStartList( styleGen.getOLStyleName() );
+        if(properties!=null) {
+            internalStartList( properties.getStyleName()!=null?properties.getStyleName():styleGen.getOLStyleName() );
+        } else {
+            internalStartList( styleGen.getOLStyleName() );
+        }
     }
 
     @Override
@@ -404,7 +408,12 @@ public class ODTDocumentHandler
     protected void doStartUnorderedList( ListProperties properties )
         throws IOException
     {
-        internalStartList( styleGen.getULStyleName() );
+        if(properties!=null) {
+            internalStartList( properties.getStyleName()!=null?properties.getStyleName():styleGen.getULStyleName() );
+        } else {
+            internalStartList( styleGen.getULStyleName() );
+        }
+
     }
 
     @Override
