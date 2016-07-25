@@ -3,7 +3,7 @@
   <parent>
     <groupId>fr.opensagres.xdocreport</groupId>
     <artifactId>thirdparties-extension</artifactId>
-    <version>1.0.6-SNAPSHOT</version>
+    <version>1.0.7-SNAPSHOT</version>
   </parent>
   <artifactId>org.apache.poi.xwpf.converter.pdf.itext5</artifactId>
   <dependencies>
